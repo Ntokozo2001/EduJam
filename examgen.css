@@ -1,0 +1,226 @@
+body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.examgen-hero {
+    min-height: 80vh;
+    background: #15305D; /* Solid blue background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 48px 0 32px 0;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    box-shadow: 0 8px 32px rgba(21, 48, 93, 0.3);
+}
+
+.examgen-card {
+    background: #FFFFFF;
+    border-radius: 28px;
+    box-shadow: 0 8px 32px rgba(21, 48, 93, 0.3), 0 2px 0 #FFD700 inset;
+    padding: 40px 32px 32px 32px;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    animation: examgenPop 1.2s cubic-bezier(.4,2,.6,1);
+}
+@keyframes examgenPop {
+    0% { transform: scale(0.8) rotateY(-10deg); opacity: 0; }
+    100% { transform: scale(1) rotateY(0deg); opacity: 1; }
+}
+.examgen-card h1 {
+    color: #15305D;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+.examgen-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 0;
+}
+.examgen-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+.examgen-form label {
+    font-weight: 500;
+    color: #15305D;
+}
+.examgen-form input,
+.examgen-form select,
+.examgen-form textarea {
+    padding: 10px;
+    border: 1px solid #FFD700;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1rem;
+    background: #FFFFFF;
+    color: #15305D;
+    transition: border 0.2s;
+}
+.examgen-form input:focus,
+.examgen-form select:focus,
+.examgen-form textarea:focus {
+    border: 1.5px solid #15305D;
+    outline: none;
+}
+.examgen-btn {
+    background: #15305D;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(21, 48, 93, 0.3);
+}
+.examgen-btn:hover {
+    background: #FFD700;
+    color: #15305D;
+    border: 1px solid #15305D;
+}
+.examgen-divider {
+    margin: 28px 0 18px 0;
+    text-align: center;
+    color: #15305D;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+}
+.examgen-divider span {
+    background: #FFFFFF;
+    padding: 0 18px;
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
+}
+.examgen-divider:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0; right: 0;
+    height: 2px;
+    background: #FFD700;
+    z-index: 0;
+}
+.examgen-output {
+    background: #FFFFFF;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(21, 48, 93, 0.3), 0 2px 0 #FFD700 inset;
+    padding: 32px 28px 28px 28px;
+    max-width: 600px;
+    width: 100%;
+    margin: 36px auto 0 auto;
+    animation: examgenPop 1.2s cubic-bezier(.4,2,.6,1);
+}
+.examgen-output-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+.examgen-output-header h2 {
+    color: #15305D;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 0;
+}
+.pdf-btn {
+    background: #FFD700;
+    color: #15305D;
+    border: none;
+    border-radius: 16px;
+    padding: 8px 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(21, 48, 93, 0.2);
+    outline: none;
+}
+.pdf-btn:hover, .pdf-btn:focus {
+    background: #15305D;
+    color: #FFFFFF;
+    box-shadow: 0 4px 16px rgba(21, 48, 93, 0.3);
+}
+.examgen-questions {
+    color: #15305D;
+    font-size: 1.12rem;
+    line-height: 1.7;
+    background: #FFD700;
+    border-radius: 16px;
+    padding: 24px 18px;
+    box-shadow: 0 2px 8px rgba(21, 48, 93, 0.2);
+    margin-top: 0;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    min-height: 80px;
+    word-break: break-word;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.exam-question {
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(21, 48, 93, 0.2);
+    padding: 16px 14px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border-left: 6px solid #15305D;
+    position: relative;
+    animation: fadeInExamQ 0.7s;
+}
+@keyframes fadeInExamQ {
+    0% { opacity: 0; transform: translateY(20px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+.question-number {
+    font-weight: bold;
+    color: #15305D;
+    font-size: 1.2rem;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+.question-text {
+    color: #15305D;
+    font-size: 1.08rem;
+    font-weight: 500;
+    word-break: break-word;
+}
+.ai-answer {
+    display: block;
+    color: #15305D;
+    font-style: italic;
+    font-size: 1rem;
+    margin-top: 6px;
+    opacity: 0.8;
+}
+@media (max-width: 700px) {
+    .examgen-card, .examgen-output {
+        padding: 16px 4vw 12px 4vw;
+        border-radius: 14px;
+        max-width: 98vw;
+    }
+    .examgen-hero {
+        padding: 18px 0 10px 0;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+}

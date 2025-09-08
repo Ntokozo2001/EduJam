@@ -1,0 +1,165 @@
+body {
+    background: linear-gradient(135deg, #15305D 60%, #FFFFFF 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+header {
+    background: #FFFFFF;
+    color: #15305D;
+    padding: 30px 0 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(21, 48, 93, 0.08);
+    letter-spacing: 2px;
+}
+
+.edit-profile-container {
+    max-width: 420px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(21, 48, 93, 0.18);
+    padding: 36px 32px 28px 32px;
+}
+
+.edit-profile-form .form-group {
+    margin-bottom: 22px;
+}
+
+.edit-profile-form label {
+    display: block;
+    font-weight: 600;
+    color: #15305D;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.edit-profile-form input[type="text"],
+.edit-profile-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #15305D;
+    border-radius: 7px;
+    font-size: 1rem;
+    background: #FFD700;
+    color: #15305D;
+    transition: border 0.2s;
+    outline: none;
+    resize: none;
+}
+
+.edit-profile-form input[type="text"]:focus,
+.edit-profile-form textarea:focus {
+    border-color: #FFD700;
+    background: #FFFFFF;
+}
+
+.save-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #15305D 80%, #FFD700 100%);
+    color: #fff;
+    border: none;
+    padding: 14px 0;
+    border-radius: 7px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(21, 48, 93, 0.10);
+    transition: background 0.2s, transform 0.1s;
+}
+
+.save-btn:hover {
+    background: linear-gradient(90deg, #FFD700 80%, #15305D 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.register-row {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-row label {
+    font-weight: 600;
+    color: #15305D;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.subject-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #15305D;
+    border-radius: 7px;
+    font-size: 1rem;
+    background: #FFD700;
+    color: #15305D;
+    margin-bottom: 8px;
+    margin-top: 4px;
+    transition: border 0.2s;
+    outline: none;
+}
+
+.subject-input:focus {
+    border-color: #FFD700;
+    background: #FFFFFF;
+}
+
+.add-subject-btn {
+    background: #FFFFFF;
+    color: #15305D;
+    border: 1.5px solid #15305D;
+    border-radius: 7px;
+    padding: 8px 14px;
+    font-size: 0.98rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.add-subject-btn:hover {
+    background: #15305D;
+    color: #FFFFFF;
+}
+
+input[type="file"] {
+    background: #FFD700;
+    border: 1.5px solid #15305D;
+    border-radius: 7px;
+    padding: 8px;
+    color: #15305D;
+    font-size: 1rem;
+}
+
+.register-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #15305D 80%, #FFD700 100%);
+    color: #fff;
+    border: none;
+    padding: 14px 0;
+    border-radius: 7px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(21, 48, 93, 0.10);
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 10px;
+}
+
+.register-btn:hover {
+    background: linear-gradient(90deg, #FFD700 80%, #15305D 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+@media (max-width: 600px) {
+    .edit-profile-container {
+        padding: 18px 8px 14px 8px;
+    }
+    header {
+        padding: 18px 0 10px 0;
+    }
+}

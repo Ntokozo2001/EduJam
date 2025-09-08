@@ -1,0 +1,230 @@
+body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.register-hero {
+    min-height: 70vh;
+    background: #15305D; /* Solid blue background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0 32px 0;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    box-shadow: 0 8px 32px rgba(21, 48, 93, 0.3);
+}
+
+.register-card {
+    background: #FFFFFF;
+    border-radius: 28px;
+    box-shadow: 0 8px 32px rgba(21, 48, 93, 0.3), 0 2px 0 #FFD700 inset;
+    padding: 40px 32px 32px 32px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    animation: registerPop 1.2s cubic-bezier(.4,2,.6,1);
+}
+@keyframes registerPop {
+    0% { transform: scale(0.8) rotateY(-10deg); opacity: 0; }
+    100% { transform: scale(1) rotateY(0deg); opacity: 1; }
+}
+.register-card h1 {
+    color: #15305D;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 0;
+}
+.register-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+#subjects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.subject-input {
+    padding: 10px;
+    border: 1px solid #FFD700;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1rem;
+    background: #FFFFFF;
+    color: #15305D;
+    margin-bottom: 0;
+    transition: border 0.2s;
+}
+
+.register-form label {
+    font-weight: 500;
+    color: #15305D;
+}
+.register-form input,
+.register-form select {
+    padding: 10px;
+    border: 1px solid #FFD700;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1rem;
+    background: #FFFFFF;
+    color: #15305D;
+    transition: border 0.2s;
+}
+.register-form input:focus,
+.register-form select:focus {
+    border: 1.5px solid #15305D;
+    outline: none;
+}
+.register-btn {
+    background: #15305D;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(21, 48, 93, 0.3);
+}
+.register-btn:hover {
+    background: #FFD700;
+    color: #15305D;
+    border: 1px solid #15305D;
+}
+.add-subject-btn {
+    margin-top: 8px;
+    background: #FFD700;
+    color: #15305D;
+    border: 2px solid #FFD700;
+    border-radius: 16px;
+    padding: 7px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(21, 48, 93, 0.2);
+    outline: none;
+    display: inline-block;
+}
+.add-subject-btn:hover, .add-subject-btn:focus {
+    background: #15305D;
+    color: #FFFFFF;
+    border: 2px solid #15305D;
+    box-shadow: 0 4px 16px rgba(21, 48, 93, 0.3);
+}
+.main-footer {
+    background: #FFFFFF;
+    color: #15305D;
+    text-align: center;
+    padding: 24px 0 12px 0;
+    font-size: 1rem;
+    border-top: 1px solid #FFD700;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    margin-top: 0;
+}
+
+.register-form input[type="file"] {
+    padding: 8px 0;
+    border: none;
+    border-radius: 8px;
+    background: none;
+    color: #15305D;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.register-form input[type="file"]::-webkit-file-upload-button {
+    background: #15305D;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 16px;
+    padding: 8px 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 12px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(21, 48, 93, 0.2);
+}
+
+.register-form input[type="file"]:hover::-webkit-file-upload-button,
+.register-form input[type="file"]:focus::-webkit-file-upload-button {
+    background: #FFD700;
+    color: #15305D;
+    box-shadow: 0 4px 16px rgba(21, 48, 93, 0.3);
+}
+
+.register-form input[type="file"]::file-selector-button {
+    background: #15305D;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 16px;
+    padding: 8px 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 12px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(21, 48, 93, 0.2);
+}
+
+.register-form input[type="file"]:hover::file-selector-button,
+.register-form input[type="file"]:focus::file-selector-button {
+    background: #FFD700;
+    color: #15305D;
+    box-shadow: 0 4px 16px rgba(21, 48, 93, 0.3);
+}
+
+.register-login-link {
+    margin-top: 18px;
+    text-align: center;
+    color: #15305D;
+    font-size: 1rem;
+}
+.register-login-link a {
+    color: #15305D;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-left: 4px;
+    transition: color 0.2s;
+}
+.register-login-link a:hover {
+    color: #FFD700;
+}
+
+@media (max-width: 600px) {
+    .register-hero {
+        padding: 18px 0 10px 0;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+    .register-card {
+        padding: 16px 4vw 12px 4vw;
+        border-radius: 14px;
+    }
+    .main-footer {
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        padding: 12px 0 6px 0;
+        font-size: 0.95rem;
+    }
+}
